@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Coffee Masters - Matheus</title>
+</head>
+
+<body>
+    <div class="header">
+        <header class="header-logo"><img src="coffee_masters_logo.png" alt="a coffee logo" class="img">
+            <p class="brand-name">Coffee Masters</p>
+        </header>
+    </div>
+    <div class="container">
+        <div class="box box1">
+            <h4 class="title">ITEMS</h4>
+            <ul class="list">
+                <div class="order">
+                    <div class="amount"> 1x</div>
+                    <div class="product">Cappuccino</div>
+                    <div class="detail">
+                        <div class="detail-detail">Light foam</div>
+                        <div class="detail-detail">No cinnamon</div>
+                    </div>
+                    <div class="price"> $3.35</div>
+                </div>
+                <div class="order">
+                    <div class="amount"> 1x</div>
+                    <div class="product">Cappuccino</div>
+                    <div class="detail">
+                        <div class="detail-detail">Whole milk</div>
+                        <div class="detail-detail">Double espresso</div>
+                    </div>
+                    <div class="price"> $3.95</div>
+                </div>
+                <div class="order">
+                    <div class="amount"> 2x</div>
+                    <div class="product">Croissant</div>
+                    <div class="detail">
+                        <div class="detail-detail">Extra Chrunchy</div>
+                        <div class="detail-detail">Nutella</div>
+                    </div>
+                    <div class="price"> $5.80</div>
+                </div>
+            </ul>
+        </div>
+        <div class="double-boxes">
+            <div class="box box2">
+                <h4 class="title">NAME</h4>
+                <div class="input-box">
+                    <label for="input-name" class="input-label">Name for order</label>
+                    <input class="input-name" placeholder="customer's name">
+                </div>
+            </div>
+            <div class="box box3">
+                <h4 class="title">PAYMENT</h4>
+                <div class="input-box">
+                    <label for="input-name" class="input-label">Card Number</label>
+                    <input class="input-name" placeholder="0000 0000 0000 0000">
+                </div>
+                <div class="input-box cvv">
+                    <label for="input-name" class="input-label">CVV Number</label>
+                    <input class="input-name" placeholder="000">
+                </div>
+            </div>
+        </div>
+        <div class="box4">
+            <table class="checkout">
+                <tr class="table-row">
+                    <td class="checkout subtotal">Subtotal:</td>
+                    <td class="checkoutprice">$ 13.10</td>
+                </tr>
+                <tr class="table row">
+                    <td class="checkout tax">Tax:</td>
+                    <td class="checkoutprice">$ 1.31</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="checkout total">Total:</td>
+                    <td class="checkoutprice">$ 14.41</td>
+                </tr>
+            </table>
+            <button class="btn" onclick=""> Place order </button>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
