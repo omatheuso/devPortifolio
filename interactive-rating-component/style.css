@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --rateColor: hsl(213, 18%, 20%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+.body {
+    background-color: var(--veryDarkBlue);
+}
+
+.home {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.thanks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    border-radius: 1.5rem;
+    border: none;
+    height: 18rem;
+    width: 18rem;
+    background-image:
+      radial-gradient(
+        circle at top center,
+        var(--rateColor) 0.15%,
+        var(--darkBlue) 33%
+    );
+}
+
+.home__card {
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.thanks__card {
+    align-items: center;
+    justify-content: center;
+    row-gap: 1rem;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.little--star {
+    display: flex;
+    margin-left: 0.5rem;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rateColor);
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 50%;
+}
+
+.header {
+    width: 90%;
+}
+
+/* .header:last-child {
+    display: flex;
+    justify-self: center;
+} */
+
+.paragraph {
+    width: 90%;
+    font-size: x-small;
+}
+
+.rate {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.rate--button {
+    background-color: var(--rateColor);
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.submit--button {
+    border: none;
+    width: 90%;
+    height: 1.5rem;
+    border-radius: 10rem;
+    background-color: var(--orange);
+}
