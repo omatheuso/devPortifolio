@@ -54,7 +54,7 @@ function updateCurrentNumber (value) {
     if (currentNumber === '0') {
         currentNumber = value
     }
-    else if (equationResult !== '') {
+    else if (equation == '') {
         clearAll()
         currentNumber += value
     }
