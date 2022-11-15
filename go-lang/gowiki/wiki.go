@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"net/http"
 	"os"
 )
 
@@ -24,10 +26,27 @@ func loadPage(title string) (*Page, error) {
     return &Page{Title: title, Body: body}, nil
 }
 
-func main() {
-    p1 := &Page{Title: "TestPage", Body: []byte("This is a sample Page.")}
-    p1.save()
-    p2, _ := loadPage("TestPage")
-    fmt.Println(string(p2.Body))
+func loadHTMLPage(title string) (string, error) { //first the function arguments than return type
+    filename := title
+    body, err := os.ReadFile(filename)
+    if err != nil {
+        return "", err
+    }
+    return string(body), nil
 }
 
+func viewHandler(w http.ResponseWriter, r *http.Request) {
+    title := r.URL.Path[len("/view/"):]
+    p, _ := loadHTMLPage(title)
+    fmt.Fprintf(w, p)
+}
+
+func main() {
+    // p1 := &Page{Title: "TestPage", Body: []byte("This is a sample Page.")}
+    // p1.save()
+    // p2, _ := loadPage("TestPage")
+    // fmt.Println(string(p2.Body))
+
+    http.HandleFunc("/view/", viewHandler)
+    log.Fatal(http.ListenAndServe(":8080", nil))
+}

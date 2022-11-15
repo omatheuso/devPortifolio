@@ -54,8 +54,9 @@ function updateCurrentNumber (value) {
     if (currentNumber === '0') {
         currentNumber = value
     }
-    else if (equation == '') {
-        clearAll()
+    else if (equationResult !== '') {
+        currentNumber = ''
+        equationResult = ''
         currentNumber += value
     }
     else {
@@ -77,9 +78,10 @@ function backspace () {
 function addCurrentNumToEquation (value) {
     if (equation.includes('-') || equation.includes('+') || equation.includes('×') || equation.includes('÷')) {
         solveMath()
+        equation = currentNumber + value
     }
     else {
-        equation = `${currentNumber}${value}`
+        equation = currentNumber + value
         currentNumber = ''
     }
 

@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+}
+
+:root {
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --lightGrey: hsl(217, 12%, 63%);
+    --mediumGrey: hsl(216, 12%, 54%);
+    --darkBlue: hsl(213, 19%, 18%);
+    --rateColor: hsl(213, 18%, 20%);
+    --veryDarkBlue: hsl(216, 12%, 8%);
+}
+
+.body {
+    background-color: var(--veryDarkBlue);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.thanks {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    border-radius: 1.5rem;
+    border: none;
+    height: 20rem;
+    width: 20rem;
+    background-image:
+        radial-gradient(circle at top center,
+            var(--rateColor) 0.15%,
+            var(--darkBlue) 33%);
+}
+
+.card--home {
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.card--thanks {
+    align-items: center;
+    row-gap: 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.card__image--left {
+    display: flex;
+    margin-left: 0.5rem;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rateColor);
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    border-radius: 50%;
+}
+
+.card__image--centered {
+    padding-top: 1rem;
+}
+
+.card__image--centered__svg {
+    scale: 70%;
+}
+
+.card__header {
+    width: 90%;
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.card__header--thanks {
+    font-size: larger;
+    font-weight: 400;
+    justify-self: center;
+}
+
+.thanks--phrase {
+    background-color: var(--rateColor);
+    border-radius: 1rem;
+    font-size: 12px;
+    color: var(--orange);
+    width: 50%;
+    padding: 0.25rem;
+}
+
+.card__paragraph {
+    width: 90%;
+    font-size: 12px;
+    color: var(--mediumGrey)
+}
+
+.card__rate {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+
+.rate--button {
+    background-color: var(--rateColor);
+    cursor: pointer;
+    border: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+}
+
+.rate--button:hover {
+    background-color: var(--orange);
+}
+
+.rate--button:focus {
+    background-color: var(--lightGrey);
+}
+
+.submit--button {
+    border: none;
+    text-align: center;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 90%;
+    border-radius: 10rem;
+    background-color: var(--orange);
+}
+.submit--button:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
